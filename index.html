@@ -10,17 +10,36 @@
     <main class="page">
       <h1>Регистрация на прогулку</h1>
       <form class="form" action="#" method="post">
-        <!-- TODO fieldset/legend -->
-        <div class="form__field">
-          <label>Имя</label><input type="text" placeholder="Введите имя" />
-        </div>
-        <div class="form__field">
-          <label>Email</label
-          ><input type="text" placeholder="name@example.com" />
-        </div>
-        <!-- TODO radio, checkbox, select, textarea --><button type="submit">
-          Записаться
-        </button>
+<fieldset>
+  <legend>Контактные данные</legend>
+  <div class="form__field">
+    <label for="name">Имя</label>
+    <input id="name" name="name" type="text" placeholder="Введите имя" required />
+  </div>
+  <div class="form__field">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="name@example.com" required />
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Выберите время</legend>
+  <label><input type="radio" name="time" value="10" /> 10:00</label>
+  <label><input type="radio" name="time" value="18" /> 18:00</label>
+</fieldset>
+
+<label for="route">Маршрут</label>
+<select id="route" name="route">
+  <option value="center">Центр</option>
+  <option value="north">Север</option>
+</select>
+
+<label for="comment">Комментарий</label>
+<textarea id="comment" name="comment"></textarea>
+
+<label><input type="checkbox" name="agreement" required /> Я согласен</label>
+
+<button type="submit">Записаться</button>
       </form>
     </main>
   </body>
